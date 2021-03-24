@@ -1,4 +1,3 @@
-const router = require("express").Router();
 const mongoose = require("mongoose");
 
 const ticketSchema = new mongoose.Schema({
@@ -10,8 +9,10 @@ const ticketSchema = new mongoose.Schema({
   lables: { type: Array },
 });
 
-router.get("/", (req, res) => {
-  res.send("tickets");
+ticketSchema.set("toJSON", {
+  transfrom: (document, returnedObjcet) => {
+    delete returnedObjcet.__v;
+  },
 });
 
-module.exports = router;
+module.exports = mongoose.model("Tickets", ticketSchema);
