@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Ticket from "./Ticket";
 
-function Input(props) {
+function Input({ setData }) {
+  function handleChange(event) {
+    const value = event.target.value;
+    axios.get(`/api/tickets?searchText=${value}`).then(result => {
+      setData(result.data);
+    });
+  }
   return (
-    <>
-      <input id="searchInput"></input>
-    </>
+    <div>
+      <input id="searchInput" onChange={handleChange}></input>
+    </div>
   );
 }
 
