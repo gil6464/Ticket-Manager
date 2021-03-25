@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Ticket from "./Ticket";
 
-function Input({ setData }) {
+function Input({ setViewData }) {
   function handleChange(event) {
     const value = event.target.value;
     axios.get(`/api/tickets?searchText=${value}`).then(result => {
-      setData(result.data);
+      setViewData(result.data);
     });
   }
   return (

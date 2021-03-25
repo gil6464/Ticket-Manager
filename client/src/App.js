@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import axios from "axios";
 import "./App.css";
 import { useState, useEffect } from "react";
@@ -8,12 +7,21 @@ import TicketCounter from "./TicketCounter";
 
 function App() {
   const [data, setData] = useState([]);
+  const [viewData, setViewData] = useState([]);
 
+  function hideTicket(id) {
+    let ticketArr = viewData.filter(ticket => ticket._id !== id);
+    setViewData(ticketArr);
+  }
+  function showTicket() {
+    setViewData(data);
+  }
   useEffect(() => {
     axios
       .get("/api/tickets")
       .then(result => {
         setData(result.data);
+        setViewData(result.data);
       })
       .catch(e => {
         console.log("There was a problem with the fetch from the server :", e);
@@ -22,10 +30,10 @@ function App() {
 
   return (
     <div>
-      <TicketCounter />
-      <Input setData={setData} />
-      {data.map((obj, i) => (
-        <Ticket obj={obj} key={i} />
+      <TicketCounter value={data.length - viewData.length} />
+      <Input setViewData={setViewData} />
+      {viewData.map((obj, i) => (
+        <Ticket obj={obj} key={i} hideTicket={hideTicket} />
       ))}
     </div>
   );

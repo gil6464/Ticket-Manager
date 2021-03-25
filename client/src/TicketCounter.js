@@ -1,7 +1,6 @@
 import React from "react";
 
-function TicketCounter(props) {
-  return <div id="hideTicketsCounter ">hidden tickets:</div>;
+function TicketCounter({ value }) {
+  return <div id="hideTicketsCounter">{value}</div>;
 }
-
 export default TicketCounter;

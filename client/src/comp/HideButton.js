@@ -1,12 +1,13 @@
 import React from "react";
 
-function HideButton(props) {
-  function handleClick(event) {
-    const container = event.target.parentNode;
-    container.className = "hide";
-  }
+function HideButton({ hideTicket, id }) {
   return (
-    <button onClick={handleClick} className="hideTicketButton">
+    <button
+      onClick={() => {
+        hideTicket(id);
+      }}
+      className="hideTicketButton"
+    >
       Hide me!
     </button>
   );
