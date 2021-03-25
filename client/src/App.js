@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Ticket from "./comp/Ticket";
 import Input from "./comp/Input";
 import TicketCounter from "./TicketCounter";
+import RevealData from "./comp/RevealData";
 
 function App() {
   const [data, setData] = useState([]);
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div>
+      <RevealData showTicket={showTicket} />
       <TicketCounter value={data.length - viewData.length} />
       <Input setViewData={setViewData} />
       {viewData.map((obj, i) => (
