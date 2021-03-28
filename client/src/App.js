@@ -3,8 +3,6 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Ticket from "./comp/Ticket";
 import Input from "./comp/Input";
-// import TicketCounter from "./TicketCounter";
-// import RevealData from "./comp/RevealData";
 import Header from "./Header";
 
 function App() {

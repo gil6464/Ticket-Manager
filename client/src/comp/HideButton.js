@@ -2,14 +2,16 @@ import React from "react";
 
 function HideButton({ hideTicket, id }) {
   return (
-    <button
-      onClick={() => {
-        hideTicket(id);
-      }}
-      className="hideTicketButton"
-    >
-      Hide me!
-    </button>
+    <div className="hideButtonDiv">
+      <button
+        onClick={() => {
+          hideTicket(id);
+        }}
+        className="hideTicketButton"
+      >
+        X
+      </button>
+    </div>
   );
 }
 

@@ -1,5 +1,5 @@
-* {
-  background-color: rgb(116, 116, 116, 0.9);
+body {
+  background-color: rgb(216, 216, 216);
 }
 .inputDiv {
   text-align: center;
@@ -8,6 +8,8 @@
   width: 350px;
 }
 .ticket {
+  box-shadow: 2px 2px;
+  background-color: white;
   border: 1px solid black;
   flex: auto;
   justify-content: center;
@@ -23,4 +25,14 @@
 #button-id,
 h1 {
   text-align: center;
+}
+.hideTicketButton {
+  background-color: seashell;
+}
+.checkbox {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5em;
+  font-size: 2rem;
+  color: green;
 }
