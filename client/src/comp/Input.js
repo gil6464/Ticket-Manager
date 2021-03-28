@@ -10,7 +10,7 @@ function Input({ setViewData }) {
     });
   }
   return (
-    <div>
+    <div className="inputDiv">
       <input id="searchInput" onChange={handleChange}></input>
     </div>
   );

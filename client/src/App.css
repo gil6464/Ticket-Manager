@@ -1,16 +1,26 @@
+* {
+  background-color: rgb(116, 116, 116, 0.9);
+}
+.inputDiv {
+  text-align: center;
+}
+#searchInput {
+  width: 350px;
+}
 .ticket {
   border: 1px solid black;
   flex: auto;
   justify-content: center;
+  margin: 10px;
 }
 .label {
   margin: 10px;
   border: 1px solid black;
   background-color: blanchedalmond;
 }
-.title {
-  justify-content: center;
-}
-.hide {
-  visibility: hidden;
+#counter,
+.title,
+#button-id,
+h1 {
+  text-align: center;
 }
