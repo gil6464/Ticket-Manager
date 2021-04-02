@@ -27,7 +27,7 @@ h1 {
   flex: auto;
   justify-content: center;
   margin: 10px;
-  /* opacity: 70%; */
+  opacity: 70%;
 }
 .undone {
   box-shadow: 2px 2px;
