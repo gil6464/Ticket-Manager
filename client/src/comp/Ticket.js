@@ -2,6 +2,8 @@ import React from "react";
 import HideButton from "./HideButton";
 import Label from "./Label";
 import Done from "./Done";
+import emailIcon from "../email icon.webp";
+import clockIcon from "../clock icon.png";
 
 function Ticket({ ticket, hideTicket, changeDone, checkDone }) {
   return (
@@ -13,7 +15,8 @@ function Ticket({ ticket, hideTicket, changeDone, checkDone }) {
         </div>
         <div>{ticket.content}</div>
         <div>
-          Email: {ticket.userEmail} | creation:{" "}
+          <img src={emailIcon}></img>
+          {ticket.userEmail} | <img src={clockIcon}></img>
           {new Date(ticket.creationTime).toDateString()}
         </div>
         {ticket.labels &&
