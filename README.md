@@ -1,4 +1,4 @@
-# ![Scale-Up Velocity](./readme-files/logo-main.png) Final 2/5 - Ticket Manager
+<!-- # ![Scale-Up Velocity](./readme-files/logo-main.png) Final 2/5 - Ticket Manager
 
 This project will include most of the topics we have learnt so far.
 This repository includes a basic skeleton with automated tests, use it for you submissions.
@@ -85,4 +85,9 @@ The Express app is located in `app.js` and exports the `app` object (`module.exp
 - Your project will be graded by the number of automatic tests you pass
 - Visual creativity, use css to make this app look awesome 💅🏿
 - Code quality: Variable naming, meaningful comments, logic separation into functions
-- Git usage: commit messages, and overall git usage flow
+- Git usage: commit messages, and overall git usage flow -->
+
+This is my Ticket Manager app! 🥁📜
+You can visit in : https://ticket-manager-gil.herokuapp.com/
+I added the feature of done/undone ticket.
+Enjoy 😁
