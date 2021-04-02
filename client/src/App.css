@@ -7,14 +7,7 @@ body {
 #searchInput {
   width: 350px;
 }
-.ticket {
-  box-shadow: 2px 2px;
-  background-color: white;
-  border: 1px solid black;
-  flex: auto;
-  justify-content: center;
-  margin: 10px;
-}
+
 .label {
   margin: 10px;
   border: 1px solid black;
@@ -27,12 +20,37 @@ h1 {
   text-align: center;
 }
 .hideTicketButton {
-  background-color: seashell;
+  background-color: #009bca79;
 }
-.checkbox {
-  display: grid;
-  grid-template-columns: min-content auto;
-  grid-gap: 0.5em;
-  font-size: 2rem;
-  color: green;
+.done {
+  background-color: white;
+  flex: auto;
+  justify-content: center;
+  margin: 10px;
+  opacity: 40%;
+}
+.undone {
+  box-shadow: 2px 2px;
+  background-color: white;
+  border: 1px solid black;
+  flex: auto;
+  justify-content: center;
+  margin: 10px;
+}
+.done-div-button {
+  text-align: right;
+}
+.done-button {
+  border-radius: 10px;
+  background-color: #009bca79;
+  padding: 10px 10px;
+  font-size: 15px;
+  margin: 4px 2px;
+}
+#restoreHideTickets {
+  border-radius: 10px;
+  background-color: #057a0571;
+  padding: 10px 10px;
+  font-size: 15px;
+  margin: 4px 2px;
 }
