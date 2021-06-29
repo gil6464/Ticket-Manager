@@ -19,6 +19,6 @@ mongoose
       console.log(`app listening at http://localhost:${PORT}`)
     );
   })
-  .catch((error) => {
+  .catch(error => {
     console.log("error connecting to MongoDB:", error.message);
   });
